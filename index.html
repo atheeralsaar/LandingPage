@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--meat tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--style-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Responsive Starbucks Landing Page</title>
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="css/images/pslogo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+
+
+                <h2>Playstation<br><span> DualSense</span><br>Wireless Controller</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <img src="css/images/white.png" class="starbucks">
+            </div>
+        </div>
+
+        <ul class="thumb">
+            <li><img src="css/images/whitethumb.png" onclick="imgSlider('css/images/white.png'); changeCircleColor('#2e80d6')"></li>
+            <li><img src="css/images/blackthumb.png" onclick="imgSlider('css/images/black.png'); changeCircleColor('#151b27c2')"></li>
+            <li><img src="css/images/redthumb.png" onclick="imgSlider('css/images/red.png'); changeCircleColor('#670224db')"></li>
+        </ul>
+
+        <ul class="sci">
+            <li><a href="#"><img src="css/images/facebook.png"></a></li>
+            <li><a href="#"><img src="css/images/twitter.png"></a></li>
+            <li><a href="#"><img src="css/images/instagram.png"></a></li>
+        </ul>
+        <script type="text/javascript">
+            function imgSlider(anything) {
+                document.querySelector('.starbucks').src = anything;
+            }
+
+            function changeCircleColor(color) {
+                const circle = document.querySelector('.circle');
+                circle.style.background = color;
+            }
+
+            function toggleMenu() {
+                var menuToggle = document.querySelector('.toggle');
+                var navigation = document.querySelector('.navigation');
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active')
+            }
+
+        </script>
+    </section>
+
+</body>
+
+</html>
